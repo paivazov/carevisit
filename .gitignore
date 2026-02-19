@@ -1,0 +1,7 @@
+venv
+.venv
+.python-version
+.env
+
+.idea
+.vscode
