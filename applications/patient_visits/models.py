@@ -26,12 +26,6 @@ class Visit(models.Model):
         MISSED = 'missed', 'Missed'
 
     number = models.CharField(max_length=10, unique=True, editable=False)
-    # возможность реализации этого поля зависит от конкретной задачи. Из возможных вариантов - использование raw sql (
-    # number = models.GeneratedField(
-    #     expression=models.F("side") * models.F("side"),
-    #     output_field=models.CharField(max_length=10),
-    #     db_persist=True,
-    # )
     caregiver = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.PROTECT,
